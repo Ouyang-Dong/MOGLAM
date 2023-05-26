@@ -11,7 +11,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
     
     2.2 *train_test.py* : In the *train_test.py* file, we define the `prepare_trte_data` function for reading datasets, the `gen_trte_adj_mat` function for calculating the patient similarity matrix, the `train_epoch` function for training the model and the `test_epoch` function for testing the model.
     
-    2.3 *models.py* :
+    2.3 *models.py* : In the *models.py* file, we define the `GraphLearn` class for adaptive graph learning, the `GCN_E` class for graph convolutional network learning, the `Multiomics_Attention_mechanism` class for multi-omics attention learning and the `TransformerEncoder` class for omic-integrated representation learning.
     
     2.4 *layers.py* :
     
