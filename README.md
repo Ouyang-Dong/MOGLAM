@@ -24,8 +24,8 @@ Although we build several *.py* files, running our code is very simple. More spe
 
 # Environment Requirement
 The code has been tested running under Python 3.8. The required packages are as follows:
-1. torch == 1.12.1 (GPU version)
-2. numpy == 1.23.5
-3. pandas == 1.5.0
+- torch == 1.12.1 (GPU version)
+- numpy == 1.23.5
+- pandas == 1.5.0
 # Tutorial
 For the step-by-step tutorial and a detailed introduction to defined classes and functions, please refer to: [https://moglam.readthedocs.io/en/latest/](https://moglam.readthedocs.io/en/latest/)
