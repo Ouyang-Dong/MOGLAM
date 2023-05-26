@@ -4,7 +4,7 @@ With the rapid development and accumulation of high-throughput sequencing techno
 ![The workflow of MOGLAM method](https://github.com/Ouyang-Dong/MOGLAM/blob/master/workflow.jpg)
 # Introduction to code
 The repository mainly includes the following datasets and *.py* files as shown below：
-1. BRCA dataset for breast invasive carcinoma PAM50 subtype classification.
+1. BRCA dataset: Breast Invasive Carcinoma PAM50 Subtype Classification.
 2. The detailed *.py* files introduction are as follows:
 
     2.1 *main_MOGLAM.py* : This is the main function, we only run it to train the model, which can output the prediction performance on the test set, namely ACC, F1_weighted and F1_macro.
