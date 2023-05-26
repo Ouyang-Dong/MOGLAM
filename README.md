@@ -5,11 +5,11 @@ With the rapid development and accumulation of high-throughput sequencing techno
 # Introduction to code
 The repository mainly includes the following datasets and *.py* files as shown below：
 1. BRCA dataset for breast invasive carcinoma PAM50 subtype classification.
-2. The detailed *.py* file introduction is as follows:
+2. The detailed *.py* files introduction are as follows:
 
     2.1 *main_MOGLAM.py* : This is the main function, we only run it to train the model, which can output the prediction performance on the test set, namely ACC, F1_weighted and F1_macro.
     
-    2.2 *train_test.py* :
+    2.2 *train_test.py* : In the *train_test.py* file, we define the `prepare_trte_data` function for reading datasets, the `gen_trte_adj_mat` function for calculating the patient similarity matrix, the `train_epoch` function for training the model and the `test_epoch` function for testing the model.
     
     2.3 *models.py* :
     
