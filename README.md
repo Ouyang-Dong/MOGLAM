@@ -8,7 +8,11 @@ The repository mainly includes the following datasets and *.py* files as shown b
 2. The detailed *.py* file introduction is as follows:
 
     2.1 *main_MOGLAM.py*: 
-
+    2.2 *train_test.py*:
+    2.3 *models.py*:
+    2.4 *layers.py*:
+    2.5 *utils.py*:
+    2.6 *param.py*:
 # Environment Requirement
 The code has been tested running under Python 3.8. The required packages are as follows:
 1. torch == 1.12.1 (GPU version)
