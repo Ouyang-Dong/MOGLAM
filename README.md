@@ -27,5 +27,6 @@ The code has been tested running under Python 3.8. The required packages are as 
 - torch == 1.12.1 (GPU version)
 - numpy == 1.23.5
 - pandas == 1.5.0
+- scikit-learn==1.1.2
 # Tutorial
 For the step-by-step tutorial and a detailed introduction to defined classes and functions, please refer to: [https://moglam.readthedocs.io/en/latest/](https://moglam.readthedocs.io/en/latest/)
