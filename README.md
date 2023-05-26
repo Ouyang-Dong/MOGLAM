@@ -15,7 +15,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
     
     2.4 *layers.py* : In the *layers.py* file, we mainly define the `Attention` class for self-attention learning, the `FeedForwardLayer` class for feedforward network learning, and make use of the `EncodeLayer` class to build query matrix, key matrix, value matrix and multi-head self-attention layers.
     
-    2.5 *utils.py* :
+    2.5 *utils.py* : In the *utils.py* file, we mainly define the `cosine_distance_torch` function for cosine similarity calculation, the `gen_adj_mat_tensor` function for patient similarity matrix construction and the `GraphConstructLoss` function for adaptive graph structure loss learning.
     
     2.6 *param.py* :
 
