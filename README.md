@@ -6,6 +6,7 @@ With the rapid development and accumulation of high-throughput sequencing techno
 The repository mainly includes the following datasets and *.py* files as shown below：
 1. BRCA dataset for breast invasive carcinoma PAM50 subtype classification.
 2. The detailed *.py* file introduction is as follows:
+
     2.1 *main_MOGLAM.py*: 
 
 # Environment Requirement
