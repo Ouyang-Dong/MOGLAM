@@ -17,7 +17,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
     
     2.5 *utils.py* : In the *utils.py* file, we mainly define the `cosine_distance_torch` function for cosine similarity calculation, the `gen_adj_mat_tensor` function for patient similarity matrix construction and the `GraphConstructLoss` function for adaptive graph structure loss learning.
     
-    2.6 *param.py* :
+    2.6 *param.py* : In the *param.py* file, we define the `parameter_parser` function for setting hyperparameters.
 
 
 # Environment Requirement
