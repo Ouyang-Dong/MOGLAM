@@ -13,7 +13,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
     
     2.3 *models.py* : In the *models.py* file, we define the `GraphLearn` class for adaptive graph learning, the `GCN_E` class for graph convolutional network learning, the `Multiomics_Attention_mechanism` class for multi-omics attention learning and the `TransformerEncoder` class for omic-integrated representation learning.
     
-    2.4 *layers.py* :
+    2.4 *layers.py* : In the *layers.py* file, we mainly define the `Attention` class for self-attention learning, the `FeedForwardLayer` class for feedforward network learning, and make use of the `EncodeLayer` class to build query matrix, key matrix, value matrix and multi-head self-attention layers.
     
     2.5 *utils.py* :
     
