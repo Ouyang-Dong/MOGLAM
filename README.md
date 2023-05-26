@@ -20,7 +20,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
     2.6 *param.py* : In the *param.py* file, we define the `parameter_parser` function for setting hyperparameters.
 
 # How to run the code
-Although we build several *.py* files, running our code is very simple. More specifically, we only need to run *main_MOGLAM.py* to train the model for outputting prediction results.
+Although we build several *.py* files, running our code is very simple. More specifically, we only need to run *main_MOGLAM.py* to train the model, outputting prediction results.
 
 # Environment Requirement
 The code has been tested running under Python 3.8. The required packages are as follows:
