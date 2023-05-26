@@ -7,7 +7,7 @@ The repository mainly includes the following datasets and *.py* files as shown b
 1. BRCA dataset for breast invasive carcinoma PAM50 subtype classification.
 2. The detailed *.py* file introduction is as follows:
 
-    2.1 *main_MOGLAM.py*: 
+    2.1 *main_MOGLAM.py*: This is the main function, we only run it to train the model, which can output the prediction performance on the test set, namely ACC, F1_weighted and F1_macro.
     
     2.2 *train_test.py*:
     
@@ -17,7 +17,9 @@ The repository mainly includes the following datasets and *.py* files as shown b
     
     2.5 *utils.py*:
     
-    12.6 *param.py*:
+    2.6 *param.py*:
+
+
 # Environment Requirement
 The code has been tested running under Python 3.8. The required packages are as follows:
 1. torch == 1.12.1 (GPU version)
