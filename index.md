@@ -6,7 +6,7 @@
 Welcome to MOGLAM's documentation!
 ==================================
 
-MOGLAM is an end-to-end interpretable multi-omics integration method, which mainly consists of three modules: dynamic graph convolutional network with feature selection (FSDGCN), multi-omics attention mechanism (MOAM), and omics-integrated representation learning (OIRL).
+MOGLAM is an end-to-end interpretable multi-omics integration method, which mainly consists of three modules: dynamic graph convolutional network with feature selection (FSDGCN), multi-omics attention mechanism (MOAM), and omic-integrated representation learning (OIRL).
 
 
 Tutorial
@@ -46,11 +46,11 @@ Through only running the *main_MOGLAM.py* file, we can train the MOGLAM model to
 				   num_epoch_pretrain, num_epoch, theta_smooth, theta_degree, theta_sparsity, neta, reg)
 
 
-To give the reader a deeper understanding of our proposed MOGLAM, we mainly introduce the `train_test` module called in the *main_MOGLAM.py* file, and the `models` module mainly called in the *train_test.py* file in detail step-by-step. The detailed introduction is as follows.
+To make the reader a deeper understanding of our proposed MOGLAM, we mainly introduce the `train_test` module called in the *main_MOGLAM.py* file, and the `models` module mainly called in the *train_test.py* file in detail step-by-step. The detailed introduction is as follows.
 
 ### 1. Introduction to train_test.py
-First, let's introduce the *train_test.py* file. The *train_test.py* mainly contains `train_test` ,`train_epoch`,`test_epoch` and `prepare_trte_data` functions. We can run `train_test` function to call `prepare_trte_data` function for reading training and testing datasets, `train_epoch` function for training model, and `test_epoch` function for testing model.
-#### 1.1 Reading training and testing datasets
+First, let's introduce the *train_test.py* file. The *train_test.py* mainly contains `train_test` ,`train_epoch`,`test_epoch` and `prepare_trte_data` functions. We can run `train_test` function to call `prepare_trte_data` function for reading training and test datasets, `train_epoch` function for training model, and `test_epoch` function for testing model.
+#### 1.1 Reading training and test datasets
 We utilize `np.loadtxt` to read training and test datasets, as well as their corresponding patient labels. At the same time, we use `torch.FloatTensor` to convert datasets into tensors.
 
 	def prepare_trte_data(data_folder, view_list):
@@ -101,7 +101,7 @@ We make use of cosine similarity to calculate the initial patient similarity mat
 
 
 #### 1.3 Training model
-We first update the dynamic graph convolutional network with feature selection (FSDGCN) by defining inner product regularization, cross-entropy and graph structure learning loss. Then, when *train_MOAM_OIRL = True*, the model starts to update remaining two modules, namely, multi-omics attention mechanism (MOAM), and omics-integrated
+We first update the dynamic graph convolutional network with feature selection (FSDGCN) by defining inner product regularization, cross-entropy and graph structure learning loss. Then, when *train_MOAM_OIRL = True*, the model starts to update remaining two modules, namely, multi-omics attention mechanism (MOAM), and omic-integrated
 representation learning (OIRL).
 
 	def train_epoch(data_list, adj_list, label, one_hot_label, sample_weight, model_dict, optim_dict, theta_smooth, theta_degree, theta_sparsity, neta, train_MOAM_OIRL=True):
@@ -188,10 +188,10 @@ After the MOGLAM model is trained, we use the defined `test_epoch` function to t
 		return prob
 
 ### 2. Introduction to models.py
-In the *models.py* file, `GraphLearn` class is used for adaptive graph learning, `GCN_E` class is used to define graph convolutional networks, `Multiomics_Attention_mechanism` class is used to define multi-omics attention mechanism and `TransformerEncoder` class is used to define omics-integrated representation learning.
+In the *models.py* file, `GraphLearn` class is used for adaptive graph learning, `GCN_E` class is used to define graph convolutional networks, `Multiomics_Attention_mechanism` class is used to define multi-omics attention mechanism and `TransformerEncoder` class is used to define omic-integrated representation learning.
 
 #### 2.1 Adaptive graph learning
-In the proposed MOGLAM method, we use weighted cosine similarity (ie, self.mode == 'weighted-cosine') for graph structure learning, which enables the model to achieve better classification performance. Finally, we can obtain the final patient similarity matrix for each omics by integrating the initial patient similarity and the patient similarity obtained by adaptive graph learning.
+In the proposed MOGLAM method, we use weighted cosine similarity (i.e., self.mode == 'weighted-cosine') for graph structure learning, which enables the model to achieve better classification performance. Finally, we can obtain the final patient similarity matrix for each omics by integrating the initial patient similarity and the learned patient similarity obtained by adaptive graph learning.
 
 	class GraphLearn(nn.Module):
 		def __init__(self, input_dim, adj_parameter, mode):
@@ -227,7 +227,7 @@ In the proposed MOGLAM method, we use weighted cosine similarity (ie, self.mode 
 			return output
 
 #### 2.2 Graph convolutional network
-We define a two-layer graph convolutional network and only multiply the weight matrix (W_s) and the feature matrix (X) in the first layer (ie, flag=True) to achieve dimensionality reduction.
+We define a two-layer graph convolutional network and only multiply the weight matrix (W_s) and the feature matrix (X) in the first layer (i.e., flag=True) to achieve dimensionality reduction.
 
 	class GCN_E(nn.Module):
 		def __init__(self, in_dim, hgcn_dim, featuresSelect, dropout):
@@ -278,7 +278,7 @@ We first obtain the initial attention for each omics using `nn.AdaptiveAvgPool2d
 
 			return XM_channel_attention[0]
 
-#### 2.4 Omics-integrated representation learning
+#### 2.4 Omic-integrated representation learning
 We apply `FeedForwardLayer` and `EncodeLayer` to define feedforward network and multi-head self-attention for capturing common and complementary information, respectively.
 
 	class TransformerEncoder(nn.Module):
